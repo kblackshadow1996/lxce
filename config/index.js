@@ -11,13 +11,13 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      "/api": {
-        target: "http://www.lxce.net/",
-        changeOrigin: true,
-        pathRewrite: {
-          "^/api": ""
-        }
-      }
+      // "/api": {
+      //   target: "http://www.lxce.net/r",
+      //   changeOrigin: true,
+      //   pathRewrite: {
+      //     "^/api": ""
+      //   }
+      // }
     },
 
     // Various Dev Server settings
