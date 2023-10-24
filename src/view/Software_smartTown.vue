@@ -15,7 +15,14 @@
               <td>{{item.model}}</td>
               <td>{{item.name}}</td>
               <td>
-                <img :src="item.pictureUrl" height="100px" style="margin:auto" alt="">
+                <!-- <img :src="item.pictureUrl" height="100px" style="margin:auto" alt=""> -->
+                <div class="demo-image__preview">
+                  <el-image
+                    style="width: 100px;"
+                    :src="item.pictureUrl"
+                    :preview-src-list="[item.pictureUrl]">
+                  </el-image>
+                </div>
               </td>
             </tr>
           </tbody>
@@ -64,6 +71,10 @@ export default {
   .table th,.table td{
     text-align: center;
     vertical-align: middle;
+  }
+  .table th,.table td img{
+    cursor: pointer;
+    transition: all 0.6s;
   }
 </style>
 

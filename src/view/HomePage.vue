@@ -25,9 +25,12 @@
     <div id="bigData" class="container-fuild">
       <div class="row bigData-container">
         <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">
-          <img class="img-responsive" style="width:600px" src="@/assets/img/img1.png" alt="大数据管理系统">
+          <img class="img-responsive"  src="@/assets/img/Picture2.png" alt="大数据管理系统">
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-6">
+        <div class="col-xs-12 col-sm-12 col-md-6 wow zoomIn">
+          <img class="img-responsive"  src="@/assets/img/Picture11.png" alt="大数据管理系统">
+        </div>
+        <!-- <div class="col-xs-12 col-sm-12 col-md-6">
           <h2 class="bigData-title">
             多终端多场景连接方案
             <small>/ Multi-terminal multi-scenario connection solution</small>
@@ -35,8 +38,33 @@
           <p>当今正处移动计算机设备与物联网大数据高速发展阶段，各种设备互联让人眼花缭乱，新技术也层出不穷，如何才能跟上时代潮流，与新世界连接？</p>
           <p>我们会为您提供专业完美的连接器解决方案。</p>
           <h2 class="bigData-device">PC/PAD/手机/外设/汽车/无人机 &nbsp; 设备连接方案解决</h2>
-          <!-- 跳转联系页面 -->
           <button href="#" class="btn btn-lg btn-block btn-info" @click="goConcat()">联系我们</button>
+        </div> -->
+      </div>
+      <div class="row bigData-container">
+        <div class="col-xs-6 col-sm-6 col-md-3 wow zoomIn">
+          <img class="img-responsive"  src="@/assets/img/Picture4.png" alt="大数据管理系统">
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 wow zoomIn">
+          <img class="img-responsive"  src="@/assets/img/Picture5.png" alt="大数据管理系统">
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 wow zoomIn">
+          <img class="img-responsive"  src="@/assets/img/Picture8.png" alt="大数据管理系统">
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 wow zoomIn">
+          <img class="img-responsive"  src="@/assets/img/Picture14.png" alt="大数据管理系统">
+        </div>
+      </div>
+      <div class="row bigData-container">
+        <div class="col-xs-24 col-sm-24 col-md-12" style="hieght:100%;margin:auto">
+          <h2 class="bigData-title">
+            多终端多场景连接方案
+            <small>/ Multi-terminal multi-scenario connection solution</small>
+          </h2>
+          <p>当今正处移动计算机设备与物联网大数据高速发展阶段，各种设备互联让人眼花缭乱，新技术也层出不穷，如何才能跟上时代潮流，与新世界连接？</p>
+          <p>我们会为您提供专业完美的连接器解决方案。</p>
+          <h2 class="bigData-device">PC/PAD/手机/外设/新能源汽车/无人机 &nbsp; 设备连接方案解决</h2>
+          <button href="#" class="btn btn-lg btn-block btn-info" @click="goProduct()">查看更多</button>
         </div>
       </div>
     </div>
@@ -372,6 +400,11 @@ export default {
       this.$router.push('/contactus')
       this.$store.state.navIndex = 5
     },
+    goProduct(){
+      // 跳转联系页面  /contactus
+      this.$router.push('/software?type=1')
+      this.$store.state.navIndex = 1
+    },
     async getCompany() {
       let data = await getCompany();
       this.$store.state.companyInfo = data.body
@@ -423,6 +456,8 @@ export default {
 }
 /* 大数据管理系统 */
 #bigData {
+  width: 80%;
+  margin: auto;
   padding: 100px;
   transition: all ease 0.6s;
   box-sizing: border-box;
@@ -438,6 +473,16 @@ export default {
 }
 #bigData .bigData-device {
   margin: 50px 0 20px;
+}
+#bigData .row div{
+  overflow: hidden;
+}
+#bigData img{
+  cursor: pointer;
+  transition: all 0.6s;
+}
+#bigData img:hover{
+  transform: scale(1.2);
 }
 
 /* 您身边的IT专家 */

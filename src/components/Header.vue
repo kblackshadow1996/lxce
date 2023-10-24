@@ -19,7 +19,7 @@
     <div class="header-nav container hidden-xs">
       <!-- 导航logo -->
       <div class="header-nav-logo">
-        <img src="@/assets/img/logo_black.png" style="width:200px">
+        <img src="@/assets/img/logo_black.png" style="width:120px;">
       </div>
       <!-- 导航内容 -->
       <ul class="header-nav-wrapper">
